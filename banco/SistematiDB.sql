@@ -1,4 +1,4 @@
- -- create database sistemaDb;
+-- create database sistemaDb;
 -- use sistemaDb;
 -- estrutura da Tabela de produtos
 create table tbprodutos(
@@ -98,4 +98,6 @@ where p.id_tipo_produto = t.id_tipo;
 select * from  vw_tbprodutos;
 select * from tbtipos order by rotulo_tipo;
 
-
+ 
+ 
+ 

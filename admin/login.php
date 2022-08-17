@@ -10,7 +10,11 @@
         $login_usuario = $_POST['senha_usuario'];
 
 
-        $verificaSQL = "select * from tbusuarios where login_usuario = '$login_usuario' and senha_usuario = '$senha_usuario' ";
+        $verificaSQL = "select * 
+                        from tbusuarios 
+                        where login_usuario = '$login_usuario'
+                        and senha_usuario = '$senha_usuario' 
+                        ";
 
         //carregar os dados e verificar a linha de retorno, caso exista.
         $lista_session = mysqli_query($conn, $verificaSQL);
@@ -19,7 +23,7 @@
 
         // se a sessão não existir, iniciamos uma sessão
         if(!isset($_SESSION)){
-            $sessao_antiga = session_name("chuletta");
+            $sessao_antiga = session_name("chulettaaa");
             session_start();
             $sessao_novo_nome = session_name(); // recupera o nome atual
         }
