@@ -1,7 +1,7 @@
 <?php 
     // A sessão sera iniciada em cada pagina diferente
     //determinar nivel de acesso, se necessario
-    session_name('chuletta');
+    session_name('chulettaaa');
     if(!isset($_SESSION)){
         session_start();
 

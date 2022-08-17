@@ -25,7 +25,7 @@
         if(!isset($_SESSION)){
             $sessao_antiga = session_name("chulettaaa");
             session_start();
-            $sessao_novo_nome = session_name(); // recupera o nome atual
+            $sessao_name_new = session_name(); // recupera o nome atual
         }
         if($linha!=null){
             $_SESSION['login_usuario'] = $login_usuario;
