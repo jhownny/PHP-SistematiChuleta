@@ -1,7 +1,6 @@
 <?php 
     include('../connections/conn.php');
     //inicia verificação do login
-    print_r($_POST);
     if($_POST){
         // definindo o USE do banco de dados
         mysqli_select_db($conn, $database_conn);
@@ -21,7 +20,7 @@
         $lista_session = mysqli_query($conn, $verificaSQL);
         $linha = $lista_session->fetch_assoc();
         $numeroLinhas = mysqli_num_rows($lista_session);
-            print_r($linha);
+        
         // se a sessão não existir, iniciamos uma sessão
         if(!isset($_SESSION)){
             $sessao_antiga = session_name("chulettaaa");
