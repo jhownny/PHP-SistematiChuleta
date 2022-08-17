@@ -1,13 +1,14 @@
 <?php 
     include('../connections/conn.php');
     //inicia verificação do login
+    print_r($_POST);
     if($_POST){
         // definindo o USE do banco de dados
         mysqli_select_db($conn, $database_conn);
 
         // verifica login e senha recebidos
         $login_usuario = $_POST['login_usuario'];
-        $login_usuario = $_POST['senha_usuario'];
+        $senha_usuario = $_POST['senha_usuario'];
 
 
         $verificaSQL = "select * 
@@ -20,7 +21,7 @@
         $lista_session = mysqli_query($conn, $verificaSQL);
         $linha = $lista_session->fetch_assoc();
         $numeroLinhas = mysqli_num_rows($lista_session);
-
+            print_r($linha);
         // se a sessão não existir, iniciamos uma sessão
         if(!isset($_SESSION)){
             $sessao_antiga = session_name("chulettaaa");
@@ -33,7 +34,7 @@
             $_SESSION['nome_da_sessao'] = session_name();
             echo "<script>window.open('index.php','_self')</script>";
         }else{
-            echo "<script>window.open('invasor.php','_self')</script>";
+            //echo "<script>window.open('invasor.php','_self')</script>";
         }
 
 
