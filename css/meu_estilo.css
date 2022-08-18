@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .fundofixo{
-    background: url(../images/churras-americano.jpg) no-repeat fixed;
+    background: url(../images/churras_do_bom.jpg) no-repeat fixed;
     -webkit-background-size:cover;
     background-size: cover;
 }
