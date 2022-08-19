@@ -6,7 +6,7 @@ include('acesso_conn.php');
 include('../connections/conn.php');
 
 // selecionando os dados
-$consulta = " select*from vw_tbprodutos order by descri_produto asc ";
+$consulta = " select*from vw_tbprodutos order by descri_produto asc; ";
 
 // busacr a lista completa de produtos
 $lista = $conn->query($consulta);
