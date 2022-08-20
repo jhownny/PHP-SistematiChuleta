@@ -26,7 +26,7 @@ $totalLinhas = $lista->num_rows;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="css/meu_estilo.css" type="text/css">
     <title>Busca de Produtos</title>
 </head>
@@ -62,7 +62,7 @@ $totalLinhas = $lista->num_rows;
                 <!-- Abre thumbnail/card -->
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <a href="produto_detalhe.php?id_produto=<?php echo $linha['id_produto'] ?>">
+                        <a href="produtos_busca.php?id_produto=<?php echo $linha['id_produto'] ?>">
                             <img src="images/<?php echo $linha['imagem_produto']; ?>" alt="" class="img-responsive img-rounded" >
                         </a>
                         <div class="caption text-right" >
@@ -77,13 +77,13 @@ $totalLinhas = $lista->num_rows;
                                 </strong>
                             </p>
                             <p class="text-left">
-                                <?php echo mb_strimwidth($linha['resumo_produto'],0,42,'...');?>
+                               <span> <?php echo mb_strimwidth($linha['resumo_produto'],0,42,'...');?> </span> 
                             </p>
                             <p>
                                 <button class="btn btn-default disabled" style="cursor: default;" role="button" >
                                     <?php echo number_format($linha['valor_produto'],2,',',',');?>
                                 </button>
-                                <a href="produto_detalhe.php?id_produto=<?php echo $linha['id_produto'] ?>">
+                                <a href="produtos_busca.php?id_produto=<?php echo $linha['id_produto'] ?>">
                                     <span class="hidden-xs">Saiba mais... </span>
                                     <span class="visible-xs glyphicon glyphicon-eye-open " aria-hidden="true" ></span>
                                 </a>
@@ -109,4 +109,3 @@ $totalLinhas = $lista->num_rows;
 
 
 </html>
-<?php ?>

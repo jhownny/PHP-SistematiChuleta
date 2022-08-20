@@ -29,7 +29,7 @@ $total_linhas = $lista->num_rows;
     <link rel="stylesheet" href="../css/meu_estilo.css" type="text/css" >
     <title>produtos(<?php echo $total_linhas;?>) - Lista </title>
 </head>
-<body class="" >
+<body class="fundofixo" >
     <?php include('menu_adm.php')?>
     <main>
         <h1 class="breadcrumb alert-danger" > Lista de Produtos </h1>
@@ -56,6 +56,7 @@ $total_linhas = $lista->num_rows;
                 <!-- Abre a estrutura de repetição -->
                 <?php do {?>
                 <tr> <!-- linha da tabela -->
+                    
                     <td class="hidden" ><?php echo$linha['id_produto'];?></td>
                     <td>
                         <span class="visible-xs" ><?php echo$linha['sigla_tipo'];?></span>
@@ -72,9 +73,10 @@ $total_linhas = $lista->num_rows;
                         ?>
                         <?php echo $linha['descri_produto'];?>
                     </td>
-                    <td> <?php echo number_format($linha['valor_produto'],2,',','.');?> </td>
+                    <td> <?php echo $linha['resumo_produto'];?> </td>
+                    <td> <?php echo number_format($linha['valor_produto'],2,',','.');?>  </td>
                     <td>
-                        <img src="../images/<?php echo $linha['imagem_produto'] ?>" alt="" width="100px">
+                    <img src="../images/<?php echo $linha['imagem_produto'] ?>" alt="" width="100px">
                     </td>
                     <td>
                         <a href="produto_atualiza.php?id_produto=<?php echo $linha['id_produto']?>" class="btn btn-warning btn-block btn-xs">
@@ -89,8 +91,7 @@ $total_linhas = $lista->num_rows;
                         <span class="glyphicon glyphicon-trash" aria-hidden="true" ></span>     
                         </button>
                     </td>
-                    <td></td>
-                    <td></td>
+                    
                 </tr> <!-- fecha linha da tabela -->
 
                 <?php }while ($linha = $lista->fetch_assoc()); ?> <!-- fechamento da estrutura de repetição -->
