@@ -7,8 +7,8 @@
 <!-- Link arquivos Bootstrap css -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="../css/meu_estilo.css" rel="stylesheet" type="text/css">
+<link  rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+<link  rel="stylesheet" href="../css/meu_estilo.css" type="text/css">
 </head>
 <body class="fundofixo">
 <main class="container">

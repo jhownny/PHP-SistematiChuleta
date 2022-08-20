@@ -4,8 +4,8 @@ include ('connections/conn.php');
 $buscar_user = $_GET['buscar'];
 
 //echo "<h1>Resultados para: $buscar_user</h1>";
-$consulta = "select * from vw_tbprodutos where descri_produto like '%
-$buscar_user%' order by descri_produto asc";
+$consulta = "select * from vw_tbprodutos where descri_produto like '.
+$buscar_user.' order by descri_produto asc";
 $lista = $conn->query($consulta);
 $linha = $lista->fetch_assoc();
 $totalLinhas = $lista->num_rows;

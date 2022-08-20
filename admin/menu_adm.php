@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Area Administrativa</title>
 </head>
@@ -13,30 +12,20 @@
             <!-- Agrupamento para a exibição em Mobile -->
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="$defaultNavbar" aria-expanded="false" >
-                    <span class="sr-only">
-
-                    </span>
-
-                    <span class="iconbar">
-
-                    </span>
-
-                    <span class="iconbar">
-
-                    </span>
-
-                    <span class="iconbar">
-
-                    </span>
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 <a href="index.php" class="navbar-brand">
                     <img src="../images/logochurrascopequeno.png" alt="">
                 </a>
             </div><!-- Fecha agrupamento para exibição Mobile -->
-            <div class="collapse nav-collapse" id="defaultNavbar" >
+            <!-- Nav a direita -->
+            <div class="collapse navbar-collapse" id="defaultNavbar" >
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <button class="bnt bnt-danger navbar-btn disabled" >
+                        <button type="button" class="btn btn-danger navbar-btn disabled" >
                             Olá, <?php echo $_SESSION['login_usuario']; ?>
                         </button>
                     </li>
@@ -65,8 +54,6 @@
                 </ul>
             </div> <!-- Fecha Nav a Direita -->
         </div>
-
-    
-    </nav  >
+    </nav>
 </body>
 </html>

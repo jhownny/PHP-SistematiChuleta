@@ -21,8 +21,8 @@
                         Contato@boizinho.com.br
                     </a>
                 </address>
-                <div class="embed-responsive embed-reponsive-4by3" >
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.794287004722!2d-46.45873188502264!3d-23.539900184693554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66bf22458913%3A0xecdac462b58a9475!2sSenac%20Itaquera!5e0!3m2!1spt-BR!2sbr!4v1660533148191!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.794287004722!2d-46.45873188502264!3d-23.539900184693554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66bf22458913%3A0xecdac462b58a9475!2sSenac%20Itaquera!5e0!3m2!1spt-BR!2sbr!4v1661011870146!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div><!-- fecha Area Localização -->
@@ -37,7 +37,7 @@
                         </li>
                         <li>
                             <a href="index.php#destaques" class="text-danger">
-                                <span class="glyphicon glyphicon-ok-sing" aria-hidden="true" >&nbsp;Destaques</span>
+                                <span class="glyphicon glyphicon-pushpin" aria-hidden="true" >&nbsp;Destaques</span>
                             </a>
                         </li>
                         <li>

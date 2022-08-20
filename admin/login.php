@@ -33,7 +33,7 @@
             $_SESSION['nome_da_sessao'] = session_name();
             echo "<script>window.open('index.php','_self')</script>";
         }else{
-            //echo "<script>window.open('invasor.php','_self')</script>";
+            echo "<script>window.open('invasor.php','_self')</script>";
         }
 
 

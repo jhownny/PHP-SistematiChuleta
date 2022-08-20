@@ -19,8 +19,9 @@
     <?php include('carousel.php');?>
 
     <!-- Area de destaques -->
-    <?php include('produtos_destaque.php')?>
     <a name="destaques">&nbsp;</a>
+    <?php include('produtos_destaque.php')?>
+    
 
     <!-- Area produtos em geral -->  
     <a name="produtos">&nbsp;</a>
