@@ -76,7 +76,7 @@
                                 aria-describedby="basic-addon1"
                                 required
                                 class="form_control">
-                            </span>
+                        </span>
                     </p>
                     <p>
                         <span class="input-grop" >
@@ -90,7 +90,7 @@
                                 aria-describedby="basic-addon2"
                                 required
                                 class="form_control">
-                            </span>
+                        </span>
                     </p>
                     <p>
                         <span class="input-grop" >
@@ -106,9 +106,8 @@
                                 class="form-control"
                                 cols="30"
                                 rows="5"
-                                ></textarea>
-                                
-                            </span>
+                                ></textarea>                                
+                        </span>
                     </p>
                     <p>
                         <button class="btn bt-danger btn-block" aria-label="Enviar"  role="button" >

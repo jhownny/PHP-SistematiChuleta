@@ -36,10 +36,10 @@ $total_linhas = $lista->num_rows;
             <!-- thead>th*5 -->
             <thead>
                 <th class="hidden " >Id</th>
-                <th class="text-white" >Sigla</th>
-                <th class="text-white" >Rotulo</th>
+                <th >Sigla</th>
+                <th >Rotulo</th>
                 <th>
-                    <a href="produtos_insere.php" class="btn btn-block btn-primary btn-xs">
+                    <a href="tipo_inserir.php" class="btn btn-block btn-primary btn-xs">
                         <span class="hidden-xs" >Adicionar<br></span>
                         <span class="glyphicon glyphicon-plus" aria-hidden="true" ></span>
                     </a>
