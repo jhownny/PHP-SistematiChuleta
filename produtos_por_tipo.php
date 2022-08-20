@@ -34,18 +34,44 @@ $totalLinhas = ($lista)->num_rows;
             <!-- Final do teste se a consult6a retornar vazia -->
         <div class="row" > <!-- linha de produto -->
             <!-- Inicio estrutura de repetição -->
-            <?php }do {?>
+            <?php do {?>
                 <!-- Abre thumbnail/card -->
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
                         <a href="produtos_busca.php?id_produto=<?php echo $linha['id_produto'] ?>">
                             <img src="images/<?php echo $linha['imagem_produto'] ?>" 
-                            alt="" class="img-responsive img-rounded" >
+                            alt="" class="img-responsive img-rounded">
                         </a>
+                        <div class="caption text-right" >
+                            <h3 class="text-danger" >
+                                <strong><?php echo $linha['descri_produto'] ?></strong>
+                            </h3>
+                            <p class="text-warning">
+                                <?php echo $linha['rotulo_tipo'] ?>
+                            </p>
+                            <p class="text-left">
+                                <?php echo mb_strimwidth( $linha['resumo_produto'],0,42,'...'); ?>
+                            </p>
+                            <p>
+                                <button class="btn btn-default disabled" role="button" style="cursor:default;" >
+                                    <?php echo number_format($linha['valor_produto'],2,',','.'); ?>
+                                </button>
+                                <a href="produto_detalhe.php?id_produto=<?php echo $linha['id_produto']; ?>"
+                                class="btn btn-danger" role="button" >
+                                    <span class="hidden-xs" > Saiba Mais...</span>
+                                    <span class="visible-xs glyphicon glyphicon-eye-open" aria-hidden="true" ></span>
+                                </a>
+                            </p>
+                        </div><!-- final caption -->
                     </div>
                 </div> <!-- Fecha thumbnail/card -->
-            <?php } while($linha=$lista->fetch_assoc());?><!-- final estrutura de repetição -->
+            <?php } while($linha=$lista->fetch_assoc());}?><!-- final estrutura de repetição -->
         </div> <!-- final linha de produto -->
+        <!-- rodapé -->
+        <?php include('rodape.php') ?>
+        
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
