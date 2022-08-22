@@ -102,7 +102,7 @@ $total_linhas_fk    = $lista_fk->num_rows;
                                 </span>
                                 <select name="id_tipo_produto" id="id_tipo_produto" class="form-control" required >
                                     <?php do { ?>
-                                    <option value="<?php echo $linha_fk['id_tipo'] ?>"
+                                    <option value= "<?php echo $linha_fk['id_tipo'];?>"
                                         
                                     <?php 
                                         if(!(strcmp($linha_fk['id_tipo'],$linha['id_tipo_produto']))){
@@ -113,7 +113,7 @@ $total_linhas_fk    = $lista_fk->num_rows;
                                     <?php  echo $linha_fk['rotulo_tipo'];?>
                                 
                                     </option>
-                                    <?php  } while($linha_fk=$lista_fk->fetch_assoc()); 
+                                    <?php  } while($linha_fk = $lista_fk->fetch_assoc()); 
                                         $linhas_fk = mysqli_num_rows($lista_fk);
                                         if($linhas_fk>0){
                                             mysqli_data_seek($lista_fk,0);
@@ -209,8 +209,8 @@ $total_linhas_fk    = $lista_fk->num_rows;
                 alert("a imagem deve ter no máximo 500KB");
                 $("#imagem").attr("src", "blank");
                 $("#imagem").hide;
-                $("#imagem_produto").wrap('<form>').closeset('form').get(0).reset();
-                $("#imagem_prodduto").unwrap();
+                $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
+                $("#imagem_produto").unwrap();
                 return false;
             }
 
@@ -219,8 +219,8 @@ $total_linhas_fk    = $lista_fk->num_rows;
                 alert("Forma Inválido, escolha uma imagem!");
                 $("#imagem").attr("src", "blank");
                 $("#imagem").hide;
-                $("#imagem_produto").wrap('<form>').closeset('form').get(0).reset();
-                $("#imagem_prodduto").unwrap();
+                $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
+                $("#imagem_produto").unwrap();
                 return false;
 
             }

@@ -110,7 +110,7 @@
                         </span>
                     </p>
                     <p>
-                        <button class="btn bt-danger btn-block" aria-label="Enviar"  role="button" >
+                        <button class="btn btn-danger btn-block" aria-label="Enviar"  role="button" >
                             Enviar
                             <span class="glyphicon glyphicon-send" ></span>
                         </button>
