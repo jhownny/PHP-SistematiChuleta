@@ -177,7 +177,7 @@ $total_linhas_fk    = $lista_fk->num_rows;
                             <br>
                             <!-- File imagem_produto Atual -->
                             <label for="imagem_produto_atual">Imagem Atual</label>
-                            <img src="../images/<?php echo $linha['imagem_peoduto'];?>" alt="" Class="img-responsive" style="max-width:40%">
+                            <img src="../images/<?php echo $linha['imagem_produto'];?>" alt="" Class="img-responsive" style="max-width:40%">
                             <!-- guardar imagem caso ela não seja alterada -->
                             <input type="hidden" name="imagem_produto_atual" id="imagem_produto_atual" value="<?php echo $linha['imagem_produto']; ?>">
                             <br>
