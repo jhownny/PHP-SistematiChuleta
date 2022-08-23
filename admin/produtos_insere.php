@@ -110,14 +110,23 @@ $linha_fk = $lista_fk->fetch_assoc();
                             </div>
                             <br>
                             <label for="imagem_produto">Imagem:</label>
-                            <div class="input-group" >
-                                <span class="inputgroup-addon" aria-hidden="true" >
-                                    <span class="glyphicon glyphicon-picture" aria-hidden="true" >
+                            <img src="../images/<?php echo $linha['imagem_produto'];?>" alt="" Class="img-responsive" style="max-width:40%">
+                            <!-- guardar imagem caso ela não seja alterada -->
+                            <input type="hidden" name="imagem_produto_atual" id="imagem_produto_atual" value="<?php echo $linha['imagem_produto']; ?>">
+                            <br>
+                            <!-- file imagem_produto nova -->
+                            <label for="imagem_produto">Nova Imagem:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
                                 </span>
-                                <img src="file" alt="" name="" >
-                            </span>
+                            
+                                <img src="" alt="" name="imagem" id="imagem" class="img-responsive">
+                                <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="/imagem*">
                             </div>
-
+                            <br>
+                            <!-- btn Enviar -->
+                            <input type="submit" value="atualizar" name="enviar" id="enviar" class="btn btn-danger btn-block">
                         </form>
                     </div>
                 </div>
