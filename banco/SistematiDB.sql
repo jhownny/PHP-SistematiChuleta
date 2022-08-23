@@ -98,6 +98,6 @@ where p.id_tipo_produto = t.id_tipo;
 select * from  vw_tbprodutos;
 select * from tbtipos order by rotulo_tipo;
 
+ select*from vw_tbprodutos order by descri_produto asc;
  
- 
- 
+select*from tbtipos;
