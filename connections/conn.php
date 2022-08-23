@@ -1,7 +1,7 @@
 <?php 
 // comentário linha
 $hostname_conn = "localhost";
-$database_conn = "sistemaDb";
+$database_conn = "sistemadb";
 $username_conn = "root";
 $password_conn = "";
 $charset_conn = "utf8";

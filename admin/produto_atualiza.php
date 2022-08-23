@@ -6,7 +6,7 @@ include('../connections/conn.php');
 
 if($_POST){
     // Guardando o nome da imagem no banco de dados e arquivo na pasta imagens   
-    if($_FILES['imagem_produto']['nome']){
+    if($_FILES['imagem_produto']['name']){
         $nome_img   = $_FILES['imagem_produto']['nome'];
         $tmp_img    = $_FILES['imagem_produto']['tmp_name'];
         $pasta_img  = "../imagens/".$nome_img;
@@ -18,7 +18,7 @@ if($_POST){
 
     }
     // receber os dados do formulario
-    // organizar o0s campos na mesma ordem
+    // organizar nos campos na mesma ordem
     $id_tipo_produto    =   $_POST['id_tipo_produto'];
     $destaque_produto   =   $_POST['destaque_produto'];
     $descri_produto     =   $_POST['descri_produto'];
@@ -27,7 +27,7 @@ if($_POST){
     $imagem_produto     =   $nome_img;
 
     // Campo do form para filtrar o registro 
-    $id_filtro = $_POST['id_filtro'];
+    $id_filtro = $_POST['id_produto'];
 
     // Consulta (query) SQL para inserção de dados
     $query = "update tbprodutos set
@@ -35,14 +35,14 @@ if($_POST){
         descri_produto     =   '".$descri_produto."', 
         resumo_produto     =   '".$resumo_produto."', 
         valor_produto      =   '".$valor_produto."', 
-        imagem_produto     =   '".$imagem_produto."',
-        where id_produto   =   '".$id_filtro."'";
+        imagem_produto     =   '".$imagem_produto."'
+        where id_produto   =   '".$id_filtro."';";
     $resultado = $conn->query($query);	
 
     // apos a ação a página será direcionada
     if (mysqli_insert_id($conn)){
         header('location:produtos_lista.php');
-
+        // Adicionar tratamento
     }else{
         header('location:produtos_lista.php');
 
@@ -92,7 +92,7 @@ $total_linhas_fk    = $lista_fk->num_rows;
 
                     <div class=" alert alert-danger " role="alert" >
 
-                        <form action="produto_atualizar.php" method="post" id="form_produto_atualiza" name="form_produto_atualiza" enctype="multipart/form-data" >
+                        <form action="produto_atualiza.php" method="post" id="form_produto_atualiza" name="form_produto_atualiza" enctype="multipart/form-data" >
                             <input type="hidden" name="id_produto" id="id_produto" value="<?php echo $linha['id_produto']; ?>" >
                             <label for="id_tipo_produto"></label>
 
@@ -149,7 +149,7 @@ $total_linhas_fk    = $lista_fk->num_rows;
                                 <span class="input-group-addon" >
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true" ></span>
                                 </span>
-                                <input type="text" class="form-control" id="descri_produto" name="dsecri_produto"
+                                <input type="text" class="form-control" id="descri_produto" name="descri_produto"
                                         maxlength="100" required value="<?php echo $linha['descri_produto'];?>"
                                         placeholder="Digite o Título do Produto">
                             </div>
@@ -188,7 +188,7 @@ $total_linhas_fk    = $lista_fk->num_rows;
                                     <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
                                 </span>
                             
-                                <img src="" alt="" name="imagem" id="imagem" class="imag-responsive">
+                                <img src="" alt="" name="imagem" id="imagem" class="img-responsive">
                                 <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="/imagem*">
                             </div>
                             <br>

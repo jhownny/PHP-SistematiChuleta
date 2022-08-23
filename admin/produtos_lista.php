@@ -32,7 +32,7 @@ $total_linhas = $lista->num_rows;
     <link rel="stylesheet" href="../css/meu_estilo.css" type="text/css" >
     <title>(<?php echo SYS_NAME." - Lista (" .$total_linhas;?>) Produtos </title>
 </head>
-<body class="" >
+<body class="fundofixo" >
     <?php include('menu_adm.php')?>
     <main>
         <h1 class="breadcrumb alert-danger" > Lista de Produtos </h1>
@@ -42,7 +42,7 @@ $total_linhas = $lista->num_rows;
             <thead>
                 <th class="hidden" >Id</th>
                 <th>Tipo</th>
-                <th>Descrição</th>
+                <th class="bg-danger text-white" >Descrição</th>
                 <th>Resumo</th>
                 <th>Valor</th>
                 <th>Imagem</th>
