@@ -63,7 +63,7 @@ $totalLinhas = $lista->num_rows;
                 <!-- Abre thumbnail/card -->
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <a href="produtos_busca.php?id_produto=<?php echo $linha['id_produto'] ?>">
+                        <a href="produtos_busca.php?id_produto=<?php echo $linha['id_produtos'] ?>">
                             <img src="images/<?php echo $linha['imagem_produto']; ?>" alt="" class="img-responsive img-rounded" >
                         </a>
                         <div class="caption text-right" >

@@ -100,4 +100,7 @@ select * from tbtipos order by rotulo_tipo;
 
  select*from vw_tbprodutos order by descri_produto asc;
  
-select*from tbtipos;
+select*from tbprodutos;
+
+update tbprodutos set deletado = null where id_produto between 1 and 9;
+select * from vw_tbprodutos where deletado is null order by descri_produto; 

@@ -29,17 +29,17 @@ $total_linhas = $lista->num_rows;
 </head>
 <body class="fundofixo" >
 <?php include('menu_adm.php')?>
-    <main>
+    <main class="container" >
         <h1 class="breadcrumb alert-danger" > Lista de Usuarios </h1>
         <table class="table table table-condensed table-hover tbopacidade">
 
             <!-- thead>th*5 -->
             <thead>
                 <th class="hidden text-primary" >Id</th>
-                <th >Nome</th>
+                <th class="bg-danger text-white" >Nome</th>
                 <th class="hidden" >Senha</th>
-                <th >Nivel</th>
-                <th>
+                <th class="bg-danger text-white" >Nivel</th>
+                <th class="bg-danger text-white" >
                     <a href="usuarios_inserir.php" class="btn btn-block btn-primary btn-xs">
                         <span class="hidden-xs" >Adicionar<br></span>
                         <span class="glyphicon glyphicon-plus" aria-hidden="true" ></span>

@@ -76,7 +76,7 @@ $total_linhas_fk    = $lista_fk->num_rows;
 </head>
 <body class="fundofixo" >
     <?php include('menu_adm.php') ?>
-    <main>
+    <main class="container" >
         <div class="row">
             <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-6">
                 <h4 class="breadcrumb text-danger">
