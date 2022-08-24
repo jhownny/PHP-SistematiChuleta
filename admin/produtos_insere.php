@@ -10,7 +10,7 @@ include('../connections/conn.php');
 $campos_insert = "id_tipo_produto, destaque_produto, descri_produto, resumo_produto, valor_produto, imagem_produto";
 
 if($_FILES['imagem_produto']['name']){
-    $nome_img   = $_FILES['imagem_produto']['nome'];
+    $nome_img   = $_FILES['imagem_produto']['name'];
     $tmp_img    = $_FILES['imagem_produto']['tmp_name'];
     $pasta_img  = "../imagens/".$nome_img;
     move_uploaded_file($tmp_img, $pasta_img); 
@@ -59,12 +59,10 @@ $linha_fk = $lista_fk->fetch_assoc();
                             <label for="id_tipo_produto">Tipo:</label>
                             <div class="input-group">
                                 <span class="input-group-addon" >
-                                    <span class="glyphicon glyphicon-task">
-
-                                    </span>
+                                    <span class="glyphicon glyphicon-task"></span>
                                 </span>
                                 <select name="id_tipo_produto" id="id_tipo_produto" class="form-control" required>
-
+                                        aaaaaaaaaa
                                 </select>
                             </div>
                             <br>
@@ -96,7 +94,7 @@ $linha_fk = $lista_fk->fetch_assoc();
                             <label for="resumo_produto">Resumo:</label>
                             <div class="input-group" >
                                 <span class="input-group-addon" >
-                                    <span class="glyphicno glyphicon-lista-alt" aria-hidden="true" ></span>
+                                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true" ></span>
                                 </span>
                                 <textarea name="resumo_produto" id="resumo_produto" cols="30" rows="8" placeholder="Digite os detalhes do produto" class="form-control" ></textarea>
                             </div>
@@ -126,7 +124,7 @@ $linha_fk = $lista_fk->fetch_assoc();
                             </div>
                             <br>
                             <!-- btn Enviar -->
-                            <input type="submit" value="atualizar" name="enviar" id="enviar" class="btn btn-danger btn-block">
+                            <input type="submit" value="Cadastrar" name="enviar" id="enviar" class="btn btn-danger btn-block">
                         </form>
                     </div>
                 </div>

@@ -41,14 +41,14 @@ $total_linhas = $lista->num_rows;
             <!-- thead>th*8 -->
             <thead>
                 <th class="hidden" >Id</th>
-                <th>Tipo</th>
+                <th class="bg-danger text-white" >Tipo</th>
                 <th class="bg-danger text-white" >Descrição</th>
-                <th>Resumo</th>
-                <th>Valor</th>
-                <th>Imagem</th>
-                <th>
-                    <a href="produtos_insere.php" class="btn btn-block btn-primary btn-xs">
-                        <span class="hidden-xs" >Adicionar<br></span>
+                <th class="bg-danger text-white" >Resumo</th>
+                <th class="bg-danger text-white" >Valor</th>
+                <th class="bg-danger text-white" >Imagem</th>
+                <th class="bg-danger text-white" >
+                    <a href="produtos_insere.php" class="btn btn-block btn-primary btn-xs ">
+                        <span class="hidden-xs  " >Adicionar<br></span>
                         <span class="glyphicon glyphicon-plus" aria-hidden="true" ></span>
                     </a>
                 </th>   
