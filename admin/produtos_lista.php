@@ -35,7 +35,7 @@ $total_linhas = $lista->num_rows;
 <body class="fundofixo" >
     <?php include('menu_adm.php')?>
     <main class="container" >
-        <h1 class="breadcrumb alert-danger" > Lista de Produtos </h1>
+        <h1 class="breadcrumb alert-success" > Lista de Produtos </h1>
         <table class="table table table-condensed table-hover tbopacidade">
 
             <!-- thead>th*8 -->
@@ -58,7 +58,7 @@ $total_linhas = $lista->num_rows;
             <tbody> <!-- Corpo da tabela -->
                 <!-- Abre a estrutura de repetição -->
                 <?php do {?>
-                <tr class="bg-success text-white" > <!-- linha da tabela -->
+                <tr class="bg-danger text-white" > <!-- linha da tabela -->
                     
                     <td class="hidden" ><?php echo$linha['id_produto'];?></td>
                     <td>
@@ -104,50 +104,62 @@ $total_linhas = $lista->num_rows;
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" role=" dialog " >
-        <div class="modal-content">
-            
-            <div class="modal-header">
 
-                <button class="close" type="button" data-dismiss="modal">&times; ></button>
+        <!-- Area interna modal -->
+        <div class="modal-dialog" >
+            <div class="modal-content">        
+                <div class="modal-header">
 
-                <h4 class="modal-tittle text-danger" > Atenção! </h4>
-            </div>
-            <div class="modal-body" >
-                Deseja realmente  <strong>excluir</strong> o item?
-                <h3><span class="text-danger none" ></span></h3>
-            </div>
-            <div class="modal-footer" >
-                <a href="#" type="button" class=" btn btn-danger dalete-yes " > Confirmar </a>
-                <button class="btn btn-success" data-dismiss="modal"  >
-                    Cancelar
-                </button>
-            </div>
+                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title text-danger" > Atenção! </h3>
 
+                </div>
+                <div class="modal-body" >
+
+                    Deseja realmente  <strong>excluir</strong> o item?
+                    <h3><span class="text-danger nome" ></span></h3>
+
+                </div>
+                <div class="modal-footer" >
+
+                    <a href="#" type="button" class=" btn btn-danger dalete-yes " > 
+                        Confirmar
+                    </a>
+
+                    <button class="btn btn-success" data-dismiss="modal"  >
+                        Cancelar
+                    </button>
+
+                </div>
+
+            </div>
         </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
     <!-- Script para o modal -->
     <script type="text/javascript" >
-    $('.delete').on('click',function(){
+        $('.delete').on('click', function(){
+
         // Busca o Valor do Atributo (data-nome)
         var nome = $(this).data('nome');
+
         //Busca o Valor do Atributo (data-id)
         var id = $(this).data('id');
-        // INsere o Nome do Item na Configuração do Modal
+
+        // Insere o Nome do Item na Configuração do Modal
         $('span.nome').text(nome);
+
         // Enviar o Id Através do link do Botão confirmar
         $('a.delete-yes').attr('href','produto_excluir.php?id_produto='+id);
         
         // Abre o Modal
-        $('#mymodal').modal(show);
+        $('#myModal').modal('show');
         })
+
     </script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    
-
-
 
 </body>
 </html>

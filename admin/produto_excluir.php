@@ -1,11 +1,11 @@
 <?php 
-//
+// incluindo o sistema de autenticação
 include('acesso_conn.php');
 
-//
+// 
 include('../connections');
 
-//
+// incluindo conexão com banco de dados
 include('../connections/conn.php');
 
 $id_prod = $_GET['id_produto'];

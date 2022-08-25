@@ -35,22 +35,20 @@ $linha = $produtoConsulta->fetch_assoc();
                             <img src="images/<?php echo $linha['imagem_produto']; ?>" alt="" class="img-responsive img-rounded" >
                         </a>
                         <div class="caption text-right" >
-                            <h3 class="text-danger" >
+                            <h2 class="text-danger" >
                                 <strong><?php echo ($linha['descri_produto']); ?></strong>
-                            </h3>
+                            </h2>
                             <p class="text-warning">
                                 <strong>
                                     <?php echo ($linha['rotulo_tipo']);?>
                                 </strong>
                             </p>
-                            <p class="text-warning">
+                            <br>
+                            <h3 class="text-warning" >
                                 <strong>
-                                    <?php echo ($linha['resumo_tipo']);?>
+                                    <?php echo ($linha['resumo_produto']);?>
                                 </strong>
-                            </p>
-                            <p class="text-left">
-                                <?php echo $linha['resumo_produto'];?>
-                            </p>
+                            </h3>
                             <p>
                                 <button class="btn btn-default disabled" style="cursor: default;" role="button" >
                                     <?php echo number_format($linha['valor_produto'],2,',',',');?>
