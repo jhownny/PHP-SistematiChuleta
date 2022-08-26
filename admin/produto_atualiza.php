@@ -31,7 +31,7 @@ if($_POST){
 
     // Consulta (query) SQL para inserção de dados
     $query = "update tbprodutos set
-        destaques_produto  =   '".$destaque_produto."', 
+        destaque_produto  =   '".$destaque_produto."', 
         descri_produto     =   '".$descri_produto."', 
         resumo_produto     =   '".$resumo_produto."', 
         valor_produto      =   '".$valor_produto."', 

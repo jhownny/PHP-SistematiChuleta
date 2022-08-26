@@ -59,7 +59,7 @@ if($_POST){
                         </button>
                     </a>
                 
-                    Inserindo Produtos
+                    Inserindo Tipos
                 </h4>
                 <div class="thumbnail">
                     <div class="alert alert-danger" role="alert">

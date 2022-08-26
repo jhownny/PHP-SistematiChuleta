@@ -91,7 +91,7 @@ $total_linhas_fk    = $lista_fk->num_rows;
                             </div>
                             <br>
                             <!-- Textearea de resumo_produto -->
-                            <label for="nivel_usuario">Rotulo:</label>
+                            <label for="nivel_usuario">Nivel:</label>
                             <div class="input-group">
                                 <span class="input-group-addon" >
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true" ></span>

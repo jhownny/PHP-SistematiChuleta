@@ -9,6 +9,7 @@ if($_POST){
    
     // receber os dados do formulario
     // organizar nos campos na mesma ordem
+    //$id_tipo     =   $_POST['id_tipo'];
     $sigla_tipo     =   $_POST['sigla_tipo'];
     $rotulo_tipo    =   $_POST['rotulo_tipo'];
 
@@ -39,13 +40,6 @@ $query_busca    = "select * from tbtipos where id_tipo = ".$id_alterar;
 $lista          = $conn->query($query_busca);
 $linha          = $lista->fetch_assoc();
 $total_linhas   = $lista->num_rows;
-
-
-$consulta_fk        = "select * from tbtipos order by rotulo_tipo asc";
-$lista_fk           = $conn->query($consulta_fk);
-$linha_fk           = $lista_fk->fetch_assoc();
-$total_linhas_fk    = $lista_fk->num_rows;
-
 
 ?>
 <!DOCTYPE html>
@@ -117,5 +111,5 @@ $total_linhas_fk    = $lista_fk->num_rows;
 </html>
 <?php 
     mysqli_free_result($lista);
-    mysqli_free_result($lista_fk);
+
 ?>

@@ -44,7 +44,7 @@ $total_linhas = $lista->num_rows;
                 <th class="bg-danger text-white" >Tipo</th>
                 <th class="bg-danger text-white" >Descrição</th>
                 <th class="bg-danger text-white" >Resumo</th>
-                <th class="bg-danger text-white" >Valor</th>
+                <th class="bg-danger text-white" >Valor</th> 
                 <th class="bg-danger text-white" >Imagem</th>
                 <th class="bg-danger text-white" >
                     <a href="produtos_insere.php" class="btn btn-block btn-primary btn-xs ">

@@ -82,7 +82,7 @@
                 </div><!-- Fecha botão Listar -->
                 <!-- botão Inserir -->
                 <div class="btn-group">
-                   <a href="tipos_insere.php">
+                   <a href="tipo_inserir.php">
                        <button class="btn btn-warning">
                             Inserir
                         </button>
@@ -122,7 +122,7 @@
                 </div><!-- Fecha botão Listar -->
                 <!-- botão Inserir -->
                 <div class="btn-group">
-                   <a href="usuarios_insere.php">
+                   <a href="usuarios_inserir.php">
                        <button class="btn btn-info">
                             Inserir
                         </button>
