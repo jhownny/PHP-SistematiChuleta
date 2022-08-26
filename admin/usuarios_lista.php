@@ -30,16 +30,16 @@ $total_linhas = $lista->num_rows;
 <body class="fundofixo" >
 <?php include('menu_adm.php')?>
     <main class="container" >
-        <h1 class="breadcrumb alert-danger" > Lista de Usuarios </h1>
+        <h1 class="breadcrumb alert-info" > Lista de Usuarios </h1>
         <table class="table table table-condensed table-hover tbopacidade">
 
             <!-- thead>th*5 -->
             <thead>
                 <th class="hidden text-primary" >Id</th>
-                <th class="bg-danger text-white" >Nome</th>
+                <th class="bg-info text-white" >Nome</th>
                 <th class="hidden" >Senha</th>
-                <th class="bg-danger text-white" >Nivel</th>
-                <th class="bg-danger text-white" >
+                <th class="bg-info text-white" >Nivel</th>
+                <th class="bg-info text-white" >
                     <a href="usuarios_inserir.php" class="btn btn-block btn-primary btn-xs">
                         <span class="hidden-xs" >Adicionar<br></span>
                         <span class="glyphicon glyphicon-plus" aria-hidden="true" ></span>
@@ -51,7 +51,7 @@ $total_linhas = $lista->num_rows;
             <tbody> <!-- Corpo da tabela -->
                 <!-- Abre a estrutura de repetição -->
                 <?php do {?>
-                <tr> <!-- linha da tabela -->
+                <tr class="bg-info text-white" > <!-- linha da tabela -->
                     <td class="hidden" ><?php echo$linha['id_usuario'];?></td>
                     <td>
                         <span class="" ><?php echo$linha['login_usuario'];?></span>
@@ -80,6 +80,39 @@ $total_linhas = $lista->num_rows;
         </table>
     </main>
 
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role=" dialog " >
+
+        <!-- Area interna modal -->
+        <div class="modal-dialog" >
+            <div class="modal-content">        
+                <div class="modal-header">
+
+                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title text-danger" > Atenção! </h3>
+
+                </div>
+                <div class="modal-body" >
+
+                    Deseja realmente  <strong>excluir</strong> o ususario?
+                    <h3><span class="text-danger nome" ></span></h3>
+
+                </div>
+                <div class="modal-footer" >
+
+                    <a href="#" type="button" class=" btn btn-danger dalete-yes " > 
+                        Confirmar
+                    </a>
+
+                    <button class="btn btn-success" data-dismiss="modal"  >
+                        Cancelar
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>

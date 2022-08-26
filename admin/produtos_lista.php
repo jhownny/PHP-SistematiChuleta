@@ -35,7 +35,7 @@ $total_linhas = $lista->num_rows;
 <body class="fundofixo" >
     <?php include('menu_adm.php')?>
     <main class="container" >
-        <h1 class="breadcrumb alert-success" > Lista de Produtos </h1>
+        <h1 class="breadcrumb alert-danger" > Lista de Produtos </h1>
         <table class="table table table-condensed table-hover tbopacidade">
 
             <!-- thead>th*8 -->
