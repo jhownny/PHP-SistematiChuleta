@@ -13,7 +13,7 @@
         <div class="alert alert-warning alert-dismissible">
             
             <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <h3><strong>
+            <h3 class="text-danger"><strong>
                 50% de desconto no valor do rodízio do titular da reserva,
                 e 15% de desconto em todas as bebidas da comada da mesa associada a reserva, 
                 para reservas com mais de 4 pessoas.
