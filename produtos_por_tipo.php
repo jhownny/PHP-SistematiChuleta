@@ -1,14 +1,16 @@
-<?php 
+<?php
+
 include ('connections/conn.php');
 
 $idTipo = $_GET['id_tipo'];
-$consulta = "select * from vw_tbprodutos where id_tipo_produto = ".$idTipo." order by descri_produto";
+$consulta = "select * from vw_tbprodutos where id_tipo_produto = '%".$idTipo."%' order by descri_produto";
 $lista = $conn->query($consulta);
 $linha = $lista->fetch_assoc();
 $totalLinhas = ($lista)->num_rows;
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +28,9 @@ $totalLinhas = ($lista)->num_rows;
                     <span class="glyphicon glyphicon-chevron-left" ></span>
                 </a>
                 Em breve teremos produtos deste tipo
-                <strong><i><?php echo $buscar_user;?></i></strong>
+                <strong><i>
+                    <?php echo $buscar_user;?>
+                </i></strong>
                 <br>
                 A busca não retornou nenhum produto. Em breve atualizaremos.
             </h2>

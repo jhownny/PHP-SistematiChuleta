@@ -43,22 +43,27 @@ $totalLinhas = $listaTipos->num_rows;
                             <span class="glyphicon glyphicon-home"></span>
                         </a>
                     </li>
+                    <li>
+                        <a href="./admin/reserva/reserva_publica.php" type="button" class="btn btn-warning">
+                            <span class="text-danger"> <strong>Realizar Reservas</strong> </span>
+                        </a>
+                    </li>
                     <li><a href="index.php#destaques">Destaques</a></li>
                     <li><a href="index.php#produtos">Produtos</a></li>
                     <!--Dropdown-->
                     <li class="dropdown">
-                        <a href="" 
+                        <a href="produtos_por_tipo.php" 
                         class="dropdown-toggle" 
                         data-toggle="dropdown" 
                         role="button" 
                         aria-haspopup="true" 
                         aria-expanded="false">
-                        Tipos <span class="caret"></span>
-                        </a>
+                        Tipos 
+                        <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <!-- Abre estrutura de repetição -->
                             <?php do { ?>
-                                <li>
+                                <li class="dropdown-item">
                                     <a href="produtos_por_tipo.php?id_tipo=<?php echo $linhaTipo['id_tipo'] ?>">
                                         <?php echo $linhaTipo['rotulo_tipo'] ?> 
                                     </a>
@@ -68,11 +73,7 @@ $totalLinhas = $listaTipos->num_rows;
                         </ul> <!-- fecha lista de tipo -->
                     </li>    <!--fecha Dropdown-->
                     <li><a href="index.php#contato">Contato</a></li>
-                    <li>
-                        <a href="./admin/reserva/reserva_publica.php" type="button" class="btn btn-warning">
-                            <span class="text-success" >Reservas</span>
-                        </a>
-                    </li>
+
                     <li>
                         <!-- formulário de busca -->
                         <form action="produtos_busca.php" 

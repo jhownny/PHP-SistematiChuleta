@@ -18,6 +18,10 @@
 <a name="home">&nbsp;</a>
 <main class="container">
 
+    <!-- faixa de anunciamento dos descontos -->  
+    <a name="reserva"></a>
+    <?php include('reserva_faixa.php');?>
+
     <!-- Area do Carousel -->
     <?php include('carousel.php');?>
 
@@ -29,7 +33,7 @@
     <!-- Area produtos em geral -->  
     <a name="produtos">&nbsp;</a>
     <?php include('produtos_geral.php');?>
-    <hr>
+    <br>
 
     <!-- Area de Rodapé -->
     <footer>
