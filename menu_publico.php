@@ -69,6 +69,11 @@ $totalLinhas = $listaTipos->num_rows;
                     </li>    <!--fecha Dropdown-->
                     <li><a href="index.php#contato">Contato</a></li>
                     <li>
+                        <a href="./admin/reserva/reserva_publica.php" type="button" class="btn btn-warning">
+                            <span class="text-success" >Reservas</span>
+                        </a>
+                    </li>
+                    <li>
                         <!-- formulário de busca -->
                         <form action="produtos_busca.php" 
                             method="get" 
