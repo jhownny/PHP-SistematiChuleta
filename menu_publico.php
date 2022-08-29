@@ -44,7 +44,7 @@ $totalLinhas = $listaTipos->num_rows;
                         </a>
                     </li>
                     <li>
-                        <a href="./admin/reserva/reserva_publica.php" type="button" class="btn btn-warning">
+                        <a href="./reserva_publica.php" type="button" class="btn btn-warning">
                             <span class="text-danger"> <strong>Realizar Reservas</strong> </span>
                         </a>
                     </li>
